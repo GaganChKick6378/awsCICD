@@ -29,7 +29,7 @@ public class LocationController {
      * @param address The address to geocode.
      * @return A response entity containing the coordinates or an error message.
      */
-    @GetMapping("/geocoding")
+    @GetMapping("/api/geocoding")
     public ResponseEntity<Coordinate> forwardGeocoding(@RequestParam String address) {
         try {
             Coordinate coordinate = locationService.getCoordinates(address);
